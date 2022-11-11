@@ -1,11 +1,11 @@
-import React , { useState } from "react";
 
 const Doing = (props) => {
+    const filteredData = props.item.filter(item => item.status === 'Doing');
     return (
         <div>
             <h2>Doing</h2>
             {
-                props.item.map((data, index) => <p key={index}>{data.item}</p>)
+                filteredData.map((data, index) => <p key={index}>{data.item}</p>)
             }
         </div>
     )
